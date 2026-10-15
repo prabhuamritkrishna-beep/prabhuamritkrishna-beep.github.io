@@ -4,7 +4,7 @@ A standalone recreation of the owner's Base44 portfolio, using the five-page des
 
 ## Publish on GitHub Pages
 
-Upload `index.html`, `style.css`, `site.js`, `.nojekyll`, `404.html` and the `assets` folder to the repository root. In repository Settings → Pages, publish `main` → `/ (root)` using Deploy from a branch. Keep the repository public for free GitHub Pages hosting.
+Upload `index.html`, `style.css`, `site.js`, `.nojekyll`, `404.html` `favicon.svg`, `portrait.avif` and `Amrit_Prabhu_Resume.docx` to the repository root. In repository Settings → Pages, publish `main` → `/ (root)` using Deploy from a branch. Keep the repository public for free GitHub Pages hosting.
 
 This website uses hash routes (`#/projects`) so navigation works on GitHub Pages, including project repositories. A custom domain can be added later after ownership is verified. No CNAME is included until the domain is registered and its DNS is configured.
 
