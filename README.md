@@ -31,3 +31,26 @@ This website uses hash routes (`#/projects`) so navigation works on GitHub Pages
 From this directory run `python3 -m http.server 8765`, then open `http://localhost:8765`.
 
 The site loads Google Fonts, falling back to system fonts if unavailable. Portrait is copied from the owner's existing portfolio. The Word resume is the owner's approved file.
+
+## FactoryOS AI portfolio plan
+
+Added October 29, 2026. This is a portfolio roadmap, not the FactoryOS application. All seven sprint milestones, seven mini-projects, and five learning phases start as `Planned`. No build-log entries or evidence links have been invented.
+
+- `#/factoryos` — project overview, conceptual architecture, sprint, mini-lab and 30-day roadmap.
+- `#/factoryos/log` — chronological build log; initially an honest empty state.
+- Home, Projects and Learning link into the plan. Existing portfolio pages, resume files and project content are preserved.
+- `factoryos-data.js` stores the plan, statuses, evidence and journal entries. `factoryos.js` provides reusable views; `style.css` extends the existing theme.
+
+### Record verified progress
+
+Edit `factoryos-data.js` in source control. Milestone and mini-project `status` accepts `Planned`, `In Progress`, `Completed`, or `Blocked`. Add actual `commit`, `demo`, and `screenshot` URLs when available; mini-project repository URLs use `github`. Keep missing links `null`. Describe remaining work in `notes` when blocked or incomplete. Milestones support `problemsSolved` as an array of real outcomes.
+
+Each roadmap phase has `completedDates` (unique ISO dates such as `2026-10-30` belonging to that phase), `notes`, and resource links. Progress is derived from completed statuses and explicitly recorded dates; it never advances automatically with the calendar. Public progress changes require committing the data update; there is no browser-only admin interface.
+
+`buildLog` is an array of actual entries with `date`, `title`, `technologies` (array), `explanation`, `bugsAndSolutions` (array), `retrospective`, `commit` and `screenshot`. Leave it empty until real work is documented. Do not add fictional reflections, manual coding claims or verification results.
+
+### Preview and deployment review
+
+No build tool is required. Run `python3 -m http.server 8765` and visit `http://localhost:8765/#/factoryos`. JavaScript syntax can be checked with `node --check factoryos-data.js`, `node --check factoryos.js`, and `node --check site.js`.
+
+The existing GitHub Pages configuration was inspected on October 29, 2026: it deploys from `main` at `/ (root)` and retains the custom domain in `CNAME`. **Pushing to main publishes the site.** Review these changes before deploying; do not push to main until the owner approves. Include both new JavaScript files when deploying. No hosting configuration changes are needed.
