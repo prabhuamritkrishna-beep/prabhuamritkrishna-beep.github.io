@@ -102,7 +102,7 @@ function render(){
  const route = aliases[path]||path;
  const pages={'/':home,'/projects':projects,'/about':about,'/resume':resumePage,'/contact':contact,'/learning':learning,'/factoryos':factoryOSPage,'/factoryos/log':factoryOSLog};
  main.innerHTML=(pages[route]||home)();
- document.title=`${({'/':'Engineering × Building','/projects':'Projects','/about':'About','/resume':'Resume','/contact':'Contact','/learning':'Learning','/factoryos':'FactoryOS AI · Planned','/factoryos/log':'FactoryOS Build Log'})[route]||'Portfolio'} — Amrit Krishna Prabhu`;
+ document.title=`${({'/':'Engineering × Building','/projects':'Projects','/about':'About','/resume':'Resume','/contact':'Contact','/learning':'Learning','/factoryos':'FactoryOS AI · 5 milestones complete','/factoryos/log':'FactoryOS Build Log'})[route]||'Portfolio'} — Amrit Krishna Prabhu`;
  document.querySelectorAll('[data-route]').forEach(a=>{if(a.dataset.route===route||(a.dataset.route==='/factoryos'&&route==='/factoryos/log'))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
  $('#nav').classList.remove('open');$('.menu-toggle').setAttribute('aria-expanded','false');
  window.scrollTo({top:0,behavior:'instant'});

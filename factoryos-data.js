@@ -1,30 +1,24 @@
-// Planned work only. Update evidence fields after verification; never infer completion from dates.
+// Status changes reflect verified local implementation, not elapsed calendar days.
 window.factoryOSData = {
   "name": "FactoryOS AI",
-  "status": "Planned",
+  "status": "In Progress",
   "start": "2026-10-30",
   "sprintEnd": "2026-11-05",
   "roadmapEnd": "2026-11-28",
-  "subtitle": "Building an Intelligent Manufacturing Operations Platform",
-  "description": "A seven-day engineering challenge exploring full-stack software development, manufacturing simulations, production optimization, and AI-powered operational decision support.",
+  "subtitle": "First five milestones complete · Local manufacturing operations prototype",
+  "description": "Built and verified the dashboard, backend APIs, SQLite database, factory disruption simulator, and deterministic production scheduler, plus five independent engineering mini-projects. The local application uses simulated factory records and a clearly labeled mock copilot.",
   "technologies": [
     "React",
     "TypeScript",
-    "Tailwind CSS",
-    "Vite",
-    "Recharts",
+    "CSS / SVG",
     "Python",
     "FastAPI",
+    "Pydantic",
     "SQLAlchemy",
-    "PostgreSQL",
     "SQLite",
     "Alembic",
     "Server-Sent Events",
-    "LLM tool calling",
-    "MCP",
-    "Docker",
-    "Pytest",
-    "GitHub Actions"
+    "Pytest"
   ],
   "milestones": [
     {
@@ -34,8 +28,8 @@ window.factoryOSData = {
       "technologies": [
         "React",
         "TypeScript",
-        "Tailwind CSS",
-        "Recharts"
+        "CSS",
+        "SVG"
       ],
       "description": "Create the operations interface around coherent simulated factory data.",
       "features": [
@@ -59,12 +53,15 @@ window.factoryOSData = {
         "Git workflow"
       ],
       "criteria": "The dashboard loads locally, shows coherent simulated data, supports filtering, and handles empty and invalid states.",
-      "status": "Planned",
+      "status": "Completed",
       "commit": null,
       "demo": null,
-      "screenshot": null,
-      "notes": "",
-      "problemsSolved": []
+      "screenshot": "https://amritkrishnaprabhu.me/factoryos-dashboard.png",
+      "notes": "Implemented and verified on October 31, 2026 with Codex assistance. Responsive dashboard with machine monitoring, production totals, workload chart, event feed, filters, loading, empty and error states. These are milestone completions, not five separate days of independent learning.",
+      "problemsSolved": [
+        "Desktop and 320px / 390px mobile layouts checked; machine filter empty state verified."
+      ],
+      "completedOn": "2026-10-31"
     },
     {
       "day": 2,
@@ -98,19 +95,22 @@ window.factoryOSData = {
         "Asynchronous programming fundamentals"
       ],
       "criteria": "The frontend retrieves operational data from the backend, and API tests pass.",
-      "status": "Planned",
+      "status": "Completed",
       "commit": null,
       "demo": null,
-      "screenshot": null,
-      "notes": "",
-      "problemsSolved": []
+      "screenshot": "https://amritkrishnaprabhu.me/factoryos-dashboard.png",
+      "notes": "Implemented and verified on October 31, 2026 with Codex assistance. FastAPI machine, inventory, production-order and event APIs connected to the React client. Validated reservations, material receipts and error responses. These are milestone completions, not five separate days of independent learning.",
+      "problemsSolved": [
+        "Invalid quantities and over-reservations are rejected; API health monitor returned HTTP 200 for 3/3 local checks."
+      ],
+      "completedOn": "2026-10-31"
     },
     {
       "day": 3,
       "date": "2026-11-01",
       "title": "Database and Production Dependencies",
       "technologies": [
-        "PostgreSQL",
+        "SQLite",
         "SQLAlchemy",
         "Alembic"
       ],
@@ -136,12 +136,15 @@ window.factoryOSData = {
         "Migration workflows"
       ],
       "criteria": "Factory records persist after restarting the application and invalid database operations are rejected.",
-      "status": "Planned",
+      "status": "Completed",
       "commit": null,
       "demo": null,
-      "screenshot": null,
-      "notes": "",
-      "problemsSolved": []
+      "screenshot": "https://amritkrishnaprabhu.me/factoryos-dashboard.png",
+      "notes": "Implemented and verified on October 31, 2026 with Codex assistance. SQLAlchemy with SQLite persistence, relational records, atomic inventory updates, audit history and Alembic initial migration. PostgreSQL remains future work. These are milestone completions, not five separate days of independent learning.",
+      "problemsSolved": [
+        "The initial migration was verified against a fresh database and applied to the local project database; saved records survive backend restarts."
+      ],
+      "completedOn": "2026-10-31"
     },
     {
       "day": 4,
@@ -172,12 +175,15 @@ window.factoryOSData = {
         "Frontend/backend synchronization"
       ],
       "criteria": "Users can trigger and observe simulated manufacturing disruptions while the dashboard updates.",
-      "status": "Planned",
+      "status": "Completed",
       "commit": null,
       "demo": null,
-      "screenshot": null,
-      "notes": "",
-      "problemsSolved": []
+      "screenshot": "https://amritkrishnaprabhu.me/factoryos-dashboard.png",
+      "notes": "Implemented and verified on October 31, 2026 with Codex assistance. Manual simulation clock, machine failures and recovery, shortages, supplier delays, rush orders, backlog, material consumption and SSE updates. Resetting the seeded factory and repeating scenario parameters reproduces the base behavior. These are milestone completions, not five separate days of independent learning.",
+      "problemsSolved": [
+        "Disruptions invalidate outdated active schedules; completed orders consume materials only once. This prototype does not model partial task progress."
+      ],
+      "completedOn": "2026-10-31"
     },
     {
       "day": 5,
@@ -208,12 +214,15 @@ window.factoryOSData = {
         "Optimization tradeoffs"
       ],
       "criteria": "The system generates valid schedules for predefined scenarios and shows measurable differences between baseline and recovery schedules.",
-      "status": "Planned",
+      "status": "Completed",
       "commit": null,
       "demo": null,
-      "screenshot": null,
-      "notes": "",
-      "problemsSolved": []
+      "screenshot": "https://amritkrishnaprabhu.me/factoryos-dashboard.png",
+      "notes": "Implemented and verified on October 31, 2026 with Codex assistance. Dependency validation, cycle detection, compatible machine assignment, material constraints, two deterministic scheduling heuristics, timeline and schedule comparison. These are milestone completions, not five separate days of independent learning.",
+      "problemsSolved": [
+        "52 automated checks passed across API, scheduling, mock copilot and engineering calculations; production frontend build passed. Stale or blocked proposals cannot be applied; human approval is required."
+      ],
+      "completedOn": "2026-10-31"
     },
     {
       "day": 6,
@@ -302,8 +311,8 @@ window.factoryOSData = {
       "date": "2026-10-30",
       "category": "Mechanical Engineering",
       "technologies": [
-        "TypeScript",
-        "React  "
+        "HTML",
+        "JavaScript"
       ],
       "description": "Calculate the effects of dimensional tolerances in mechanical assemblies.",
       "features": [
@@ -316,10 +325,11 @@ window.factoryOSData = {
         "Validate numerical inputs."
       ],
       "objectives": "Engineering calculations, functions, arrays, frontend forms, TypeScript.",
-      "status": "Planned",
+      "status": "Completed",
       "github": null,
       "demo": null,
-      "notes": ""
+      "notes": "Implemented and verified on October 31, 2026 with Codex assistance. Standalone HTML/JavaScript calculator: asymmetric additive tolerance stack-up, minimum/maximum and input validation. Verified example: nominal 45; minimum 44.75; maximum 45.35.",
+      "completedOn": "2026-10-31"
     },
     {
       "title": "API Health Monitor",
@@ -327,8 +337,7 @@ window.factoryOSData = {
       "category": "Backend Engineering",
       "technologies": [
         "Python",
-        "Requests or HTTPX",
-        "CSV  "
+        "Standard library"
       ],
       "description": "Monitor API availability and response performance.",
       "features": [
@@ -341,10 +350,11 @@ window.factoryOSData = {
         "Display a command-line summary."
       ],
       "objectives": "HTTP, network requests, Python scripts, error handling, measurement.",
-      "status": "Planned",
+      "status": "Completed",
       "github": null,
       "demo": null,
-      "notes": ""
+      "notes": "Implemented and verified on October 31, 2026 with Codex assistance. Python standard-library monitor with repeated checks, bounded timeout, average duration and CSV export. Verified 3/3 HTTP 200 checks against the local backend.",
+      "completedOn": "2026-10-31"
     },
     {
       "title": "Smart BOM Validator",
@@ -352,7 +362,7 @@ window.factoryOSData = {
       "category": "Manufacturing Software",
       "technologies": [
         "Python",
-        "Pandas or CSV standard library  "
+        "Standard library"
       ],
       "description": "Validate bill-of-materials data used in mechanical product assemblies.",
       "features": [
@@ -366,10 +376,11 @@ window.factoryOSData = {
         "Export a validation report."
       ],
       "objectives": "Data validation, CSV processing, recursion, graphs, manufacturing data.",
-      "status": "Planned",
+      "status": "Completed",
       "github": null,
       "demo": null,
-      "notes": ""
+      "notes": "Implemented and verified on October 31, 2026 with Codex assistance. Python CSV validator detects missing fields, duplicate IDs, invalid quantities, unknown parents and circular assemblies; JSON report export. Valid sample: three parts.",
+      "completedOn": "2026-10-31"
     },
     {
       "title": "Monte Carlo Downtime Simulator",
@@ -377,8 +388,7 @@ window.factoryOSData = {
       "category": "Engineering Simulation",
       "technologies": [
         "Python",
-        "NumPy",
-        "Matplotlib  "
+        "Standard library"
       ],
       "description": "Estimate the possible impact of equipment downtime through repeated simulation.",
       "features": [
@@ -391,10 +401,11 @@ window.factoryOSData = {
         "Compare alternative operating assumptions."
       ],
       "objectives": "Probability, statistical simulation, numerical computing, engineering analysis.",
-      "status": "Planned",
+      "status": "Completed",
       "github": null,
       "demo": null,
-      "notes": ""
+      "notes": "Implemented and verified on October 31, 2026 with Codex assistance. Seeded Python Monte Carlo simulation over 1,000 shifts; CSV and SVG output. Illustrative default model returned mean downtime 25.67 minutes and p95 113.3 minutes. These are simulated outcomes, not measured factory performance.",
+      "completedOn": "2026-10-31"
     },
     {
       "title": "Critical Path Analyzer",
@@ -402,7 +413,7 @@ window.factoryOSData = {
       "category": "Algorithms and Optimization",
       "technologies": [
         "Python",
-        "NetworkX or custom graph algorithms  "
+        "Standard library"
       ],
       "description": "Determine project dependencies, total project duration, and critical tasks.",
       "features": [
@@ -417,10 +428,11 @@ window.factoryOSData = {
         "Visualize the dependency graph."
       ],
       "objectives": "Graph algorithms, scheduling, optimization, problem-solving.",
-      "status": "Planned",
+      "status": "Completed",
       "github": null,
       "demo": null,
-      "notes": ""
+      "notes": "Implemented and verified on October 31, 2026 with Codex assistance. Python critical-path method with dependency validation, earliest/latest times, slack, critical tasks and SVG timeline. Example duration 12 time units; Source task slack 2.",
+      "completedOn": "2026-10-31"
     },
     {
       "title": "AI Agent Evaluation Lab",
@@ -497,9 +509,9 @@ window.factoryOSData = {
         "GitHub commits",
         "Working demonstrations"
       ],
-      "status": "Planned",
+      "status": "In Progress",
       "completedDates": [],
-      "notes": "",
+      "notes": "Five application milestones and five mini-projects implemented with Codex on October 31. Personal learning reflections and independently completed learning days have not been recorded.",
       "resources": [
         {
           "label": "React Quick Start",
@@ -634,5 +646,32 @@ window.factoryOSData = {
       ]
     }
   ],
-  "buildLog": []
+  "buildLog": [
+    {
+      "date": "2026-10-31",
+      "title": "First five FactoryOS milestones completed locally",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "CSS / SVG",
+        "Python",
+        "FastAPI",
+        "Pydantic",
+        "SQLAlchemy",
+        "SQLite",
+        "Alembic",
+        "Server-Sent Events",
+        "Pytest"
+      ],
+      "explanation": "Built the React dashboard, validated FastAPI APIs, persistent SQLite database, six disruption scenarios, simulation clock, and deterministic dependency-aware scheduling. Added inventory receipts/reservations, human-reviewed recovery proposals and an audit trail. Five engineering mini-projects are independently runnable. Verification: 52 automated tests passed, TypeScript production build passed, SQLite migration passed, and browser desktop/mobile checks passed. The app is running locally; there is no public app deployment. The copilot is a deterministic mock, not a live LLM.",
+      "bugsAndSolutions": [
+        "Outdated plans are invalidated after machine or stock changes; stale approvals are rejected.",
+        "Inventory cannot be over-reserved, scheduling prevents pooled stock overcommit, and completed orders consume materials once.",
+        "Opening the correct VS Code project closed the original frontend terminal; the local servers were restarted from the project folder."
+      ],
+      "retrospective": "This implementation was generated and tested with Codex assistance on October 31. It does not represent five calendar days of independent work or completed mastery of the 30-day curriculum. PostgreSQL, real LLM/MCP integration, public deployment and the final two mini-projects remain future work.",
+      "commit": null,
+      "screenshot": "https://amritkrishnaprabhu.me/factoryos-dashboard.png"
+    }
+  ]
 };

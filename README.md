@@ -54,3 +54,7 @@ Each roadmap phase has `completedDates` (unique ISO dates such as `2026-10-30` b
 No build tool is required. Run `python3 -m http.server 8765` and visit `http://localhost:8765/#/factoryos`. JavaScript syntax can be checked with `node --check factoryos-data.js`, `node --check factoryos.js`, and `node --check site.js`.
 
 The existing GitHub Pages configuration was inspected on October 29, 2026: it deploys from `main` at `/ (root)` and retains the custom domain in `CNAME`. **Pushing to main publishes the site.** Review these changes before deploying; do not push to main until the owner approves. Include both new JavaScript files when deploying. No hosting configuration changes are needed.
+
+## October 31 verified FactoryOS update
+
+First five milestones and first five mini-projects completed locally with Codex assistance. 52 tests, TypeScript production build, SQLite migration and browser checks passed. Includes a real local dashboard screenshot and verification record. Overall sprint remains In Progress (5/7); learning-day counts have not been invented. Current app uses SQLite and a deterministic mock copilot. Public app deployment, PostgreSQL and live LLM/MCP integration remain future work.
